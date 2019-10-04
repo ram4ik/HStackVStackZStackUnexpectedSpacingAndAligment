@@ -15,12 +15,42 @@ struct ContentView: View {
 //            Spacer().frame(width: 10).background(Color.orange)
 //            Text("Botton")
 //        }
-        HStack {
-            Text("LBTA")
+//        HStack {
+//            Text("LBTA")
+//            Spacer()
+//                .frame(height: 5).background(Color.green)
+//            Text("LBTA")
+//        }.background(Color.blue)
+        VStack {
+            HStack {
+                Text("A - Button")
+                    .padding(.all, 16)
+                    .background(Color.purple)
+                    .padding()
+                    
+                Spacer()
+                    .frame(height: 5)
+                    .background(Color.red)
+                    .padding()
+            }
             Spacer()
-                .frame(height: 5).background(Color.green)
-            Text("LBTA")
-        }.background(Color.blue)
+                .frame(width: 5)
+                .background(Color.blue)
+                .padding()
+            
+            HStack {
+                Spacer()
+                    .frame(height: 5)
+                    .background(Color.red)
+                    .padding()
+                
+                Text("B - Button")
+                    .padding(.all, 16)
+                    .background(Color.purple)
+                    .padding()
+                    
+            }
+        }
     }
 }
 
