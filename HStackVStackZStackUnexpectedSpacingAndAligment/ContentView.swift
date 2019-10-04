@@ -21,35 +21,41 @@ struct ContentView: View {
 //                .frame(height: 5).background(Color.green)
 //            Text("LBTA")
 //        }.background(Color.blue)
-        VStack {
-            HStack {
-                Text("A - Button")
-                    .padding(.all, 16)
-                    .background(Color.purple)
-                    .padding()
-                    
-                Spacer()
-                    .frame(height: 5)
-                    .background(Color.red)
-                    .padding()
-            }
-            Spacer()
-                .frame(width: 5)
-                .background(Color.blue)
-                .padding()
+        ZStack {
             
-            HStack {
+            Color.green.edgesIgnoringSafeArea(.top)
+            Color.orange.edgesIgnoringSafeArea(.bottom)
+            
+            VStack {
+                HStack {
+                    Text("A - Button")
+                        .padding(.all, 16)
+                        .background(Color.purple)
+                        .padding()
+                        
+                    Spacer()
+                        .frame(height: 5)
+                        .background(Color.red)
+                        .padding()
+                }
                 Spacer()
-                    .frame(height: 5)
-                    .background(Color.red)
+                    .frame(width: 5)
+                    .background(Color.blue)
                     .padding()
                 
-                Text("B - Button")
-                    .padding(.all, 16)
-                    .background(Color.purple)
-                    .padding()
+                HStack {
+                    Spacer()
+                        .frame(height: 5)
+                        .background(Color.red)
+                        .padding()
                     
-            }
+                    Text("B - Button")
+                        .padding(.all, 16)
+                        .background(Color.purple)
+                        .padding()
+                        
+                }
+            }.background(Color.yellow)
         }
     }
 }
